@@ -1,3 +1,3 @@
-chess: chess.c
+all: chess.c
 	gcc -Wall -o chess chess.c
 
