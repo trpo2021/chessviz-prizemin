@@ -2,7 +2,7 @@
 #include <iostream>
 
 using namespace std;
-int checkMovePeshka(char ch[][8], int int_start1, int start2, int finish2, int start1, int int_finish1, int BorW)
+int checkMovePeshka(char ch[][8], int int_start1, int start2, int finish2, int int_finish1, int BorW)
 {
   if (ch[start2][int_start1] == 'P' && BorW % 2 == 0) 
   {
@@ -10,7 +10,7 @@ int checkMovePeshka(char ch[][8], int int_start1, int start2, int finish2, int s
     {
       if (finish2 < (start2 - 2) || int_start1 != int_finish1 || ch[finish2][int_finish1] != 32)
       {
-        cout << "Error, Please enter the correct move!\n\n";
+        cout << "Error, Please enter the correct move!\n";
         return 0;
       }
       return 1;
@@ -19,7 +19,7 @@ int checkMovePeshka(char ch[][8], int int_start1, int start2, int finish2, int s
     {
       if(finish2 < (start2 - 1) || int_start1 != int_finish1 || ch[finish2][int_finish1] != 32)
       {
-        cout << "Error, Please enter the correct move!\n\n";
+        cout << "Error, Please enter the correct move!\n";
         return 0;
       }
       return 1;
@@ -31,7 +31,7 @@ int checkMovePeshka(char ch[][8], int int_start1, int start2, int finish2, int s
     {
       if(finish2 > (start2 + 2) || int_start1 != int_finish1 || ch[finish2][int_finish1] != 32)
       { 
-        cout << "Error, Please enter the correct move!\n\n";
+        cout << "Error, Please enter the correct move!\n";
         return 0;
       }
       return 1;
@@ -40,7 +40,7 @@ int checkMovePeshka(char ch[][8], int int_start1, int start2, int finish2, int s
     {
       if(finish2 > (start2 + 1) || int_start1 != int_finish1 || ch[finish2][int_finish1] != 32)
       { 
-        cout << "Error, Please enter the correct move!\n\n";
+        cout << "Error, Please enter the correct move!\n";
         return 0;
       }
       return 1;
@@ -48,7 +48,7 @@ int checkMovePeshka(char ch[][8], int int_start1, int start2, int finish2, int s
   }
   else
   {
-    cout << "Error, Please enter the correct move!\n\n";
+    cout << "Error, Please enter the correct move!\n";
     return 0;
   }
 }
