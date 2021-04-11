@@ -1,3 +1,9 @@
+#include <iostream>
+#include <libchessviz/checkMovePeshka.h>
+#include <libchessviz/printBoard.h>
+#include <libchessviz/figureMove.h>
+
+using namespace std;
 int main()
 {
 	cout << "--------------------------------" << endl <<"| Small letters - black shapes |" << endl << "|  Big letters - white shapes  |" << endl << "--------------------------------" <<  endl;
