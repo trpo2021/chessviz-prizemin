@@ -1,6 +1,3 @@
-#Ignore main file
-chessviz
-
 #Ignore .<name> files
 *.o
 *.exe
