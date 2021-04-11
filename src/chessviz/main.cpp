@@ -1,14 +1,14 @@
-#include <iostream>
 #include <libchessviz/checkMovePeshka.h>
 #include <libchessviz/printBoard.h>
 #include <libchessviz/figureMove.h>
+#include <iostream>
 
 using namespace std;
 int main()
 {
 	cout << "--------------------------------" << endl <<"| Small letters - black shapes |" << endl << "|  Big letters - white shapes  |" << endl << "--------------------------------" <<  endl;
   int start2, finish2, int_start1, int_finish1;
-  char start1 = 0, t, finish1, figure;
+  char start1 = 0, t, finish1;
   int BorW = 0;
 
   char ch[8][8] = {{'r', 'n', 'b', 'q', 'k', 'b', 'n', 'r'},
@@ -40,7 +40,7 @@ int main()
     start2--;
     finish2--;
 
-    if(checkMovePeshka(ch, int_start1, start2, finish2, start1, int_finish1, BorW) == 1)
+    if(checkMovePeshka(ch, int_start1, start2, finish2, int_finish1, BorW) == 1)
     {
       figureMove(ch, int_start1, start2, finish2, int_finish1);
       printBoard(ch);      
