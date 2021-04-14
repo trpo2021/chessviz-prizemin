@@ -8,6 +8,6 @@
 *.a
 *.d
 
-bin/*chessviz
+bin/chessviz
 .vscode
 
