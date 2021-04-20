@@ -46,3 +46,4 @@ int checkMovePeshka(
         cout << "Error, Please enter the correct move!\n";
         return 0;
     }
+}
