@@ -43,6 +43,8 @@ $(OBJ_DIR)/%.o: %.$(SRC_EXT)
 
 .PHONY: clean
 clean:
-	$(RM) $(APP_PATH) $(LIB_PATH)
-	find $(OBJ_DIR) -name '*.o' -exec $(RM) '{}' \;
-	find $(OBJ_DIR) -name '*.d' -exec $(RM) '{}' \;
+	rm -rf $(CHESSVIZ_OBJ)*.o 
+	rm -rf $(LIBCHESSVIZ_OBJ)*.o
+	rm $(LIBCHESSVIZ_OBJ)*.a
+	rm -rf $(CHESSVIZ_BIN)*.exe
+	
