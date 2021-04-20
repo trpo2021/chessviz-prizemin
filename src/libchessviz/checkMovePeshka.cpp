@@ -1,5 +1,5 @@
-#include <libchessviz/checkMovePeshka.h>
 #include <iostream>
+#include <libchessviz/checkMovePeshka.h>
 
 using namespace std;
 int checkMovePeshka(

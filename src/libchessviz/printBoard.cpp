@@ -1,5 +1,5 @@
-#include <libchessviz/printBoard.h>
 #include <iostream>
+#include <libchessviz/printBoard.h>
 
 using namespace std;
 void printBoard(char ch[][8])

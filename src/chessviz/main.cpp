@@ -1,7 +1,7 @@
-#include <libchessviz/checkMovePeshka.h>
-#include <libchessviz/printBoard.h>
-#include <libchessviz/figureMove.h>
 #include <iostream>
+#include <libchessviz/checkMovePeshka.h>
+#include <libchessviz/figureMove.h>
+#include <libchessviz/printBoard.h>
 
 using namespace std;
 int main()
