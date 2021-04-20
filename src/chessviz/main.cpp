@@ -32,13 +32,13 @@ int main()
             cout << endl << "Black's move. Enter the coordinates: " << endl;
         }
 
-	cin >> start1 >> start2 >> t >> finish1 >> finish2;
-	int_start1 = start1;
-	int_finish1 = finish1;
-	int_start1 = (int_start1 + 3) % 10;
-	int_finish1 = (int_finish1 + 3) % 10;
-	start2--;
-	finish2--;
+        cin >> start1 >> start2 >> t >> finish1 >> finish2;
+        int_start1 = start1;
+        int_finish1 = finish1;
+        int_start1 = (int_start1 + 3) % 10;
+        int_finish1 = (int_finish1 + 3) % 10;
+        start2--;
+        finish2--;
 
         if (checkMovePeshka(ch, int_start1, start2, finish2, int_finish1, BorW)
             == 1) {
@@ -48,5 +48,5 @@ int main()
         }
     }
 
-  return 0;
+    return 0;
 }
