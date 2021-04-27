@@ -1,5 +1,6 @@
 #include <iostream>
 #include <libchessviz/checkMovePeshka.h>
+#include <libchessviz/error.h>
 
 using namespace std;
 int checkMovePeshka(
@@ -12,38 +13,40 @@ int checkMovePeshka(
 {
     if (ch[start2][int_start1] == 'P' && BorW % 2 == 0) {
         if (start2 == 6) {
-            if (finish2 < (start2 - 2) || int_start1 != int_finish1
-                || ch[finish2][int_finish1] != 32) {
-                cout << "Error, Please enter the correct move!\n";
-                return 0;
+            if ((finish2 == (start2 - 2) || finish2 == (start2 - 1))
+                && int_start1 == int_finish1
+                && ch[finish2][int_finish1] == 32) {
+                return 1;
             }
-            return 1;
+            error();
+            return 0;
         } else {
-            if (finish2 < (start2 - 1) || int_start1 != int_finish1
-                || ch[finish2][int_finish1] != 32) {
-                cout << "Error, Please enter the correct move!\n";
-                return 0;
+            if (finish2 == (start2 - 1) && int_start1 == int_finish1
+                && ch[finish2][int_finish1] == 32) {
+                return 1;
             }
-            return 1;
+            error();
+            return 0;
         }
     } else if (ch[start2][int_start1] == 'p' && BorW % 2 == 1) {
         if (start2 == 1) {
-            if (finish2 > (start2 + 2) || int_start1 != int_finish1
-                || ch[finish2][int_finish1] != 32) {
-                cout << "Error, Please enter the correct move!\n";
-                return 0;
+            if ((finish2 == (start2 + 2) || finish2 == (start2 + 1))
+                && int_start1 == int_finish1
+                && ch[finish2][int_finish1] == 32) {
+                return 1;
             }
-            return 1;
+            error();
+            return 0;
         } else {
-            if (finish2 > (start2 + 1) || int_start1 != int_finish1
-                || ch[finish2][int_finish1] != 32) {
-                cout << "Error, Please enter the correct move!\n";
-                return 0;
+            if (finish2 == (start2 + 1) && int_start1 == int_finish1
+                && ch[finish2][int_finish1] == 32) {
+                return 1;
             }
-            return 1;
+            error();
+            return 0;
         }
     } else {
-        cout << "Error, Please enter the correct move!\n";
+        error();
         return 0;
     }
 }
