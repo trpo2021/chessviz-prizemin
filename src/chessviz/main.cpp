@@ -11,7 +11,7 @@ int main()
          << "|  Big letters - white shapes  |" << endl
          << "--------------------------------" << endl;
     int start2, finish2, int_start1, int_finish1;
-    char start1 = 0, t, finish1;
+    char start1, t, finish1;
     int BorW = 0;
 
     char ch[8][8]
