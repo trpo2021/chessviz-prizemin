@@ -27,7 +27,8 @@ int checkMoveRook(
             k++;
             return k;
         } else if (
-                finish2 > start2 && finish2 < max && int_start1 == int_finish1) {
+                finish2 > start2 && finish2 < max
+                && int_start1 == int_finish1) {
             int k = 0;
             int i = start2 + 1;
             while (i < finish2) {
