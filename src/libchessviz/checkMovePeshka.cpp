@@ -1,6 +1,5 @@
 #include <iostream>
 #include <libchessviz/checkMovePeshka.h>
-#include <libchessviz/error.h>
 
 using namespace std;
 int checkMovePeshka(
@@ -11,7 +10,7 @@ int checkMovePeshka(
         int int_finish1,
         int BorW)
 {
-    const int max = 9, min = -1;
+    const int max = 8, min = -1;
     if (ch[start2][int_start1] == 'P' && BorW % 2 == 0) {
         if (start2 == 6) {
             if ((finish2 == (start2 - 2) || finish2 == (start2 - 1))
@@ -24,7 +23,6 @@ int checkMovePeshka(
                         || int_start1 == int_finish1 - 1)) {
                 return 1;
             }
-            error();
             return 0;
         } else {
             if (finish2 == (start2 - 1) && finish2 > min
@@ -38,7 +36,6 @@ int checkMovePeshka(
                         || int_start1 == int_finish1 - 1)) {
                 return 1;
             }
-            error();
             return 0;
         }
     } else if (ch[start2][int_start1] == 'p' && BorW % 2 == 1) {
@@ -47,14 +44,12 @@ int checkMovePeshka(
                 && int_start1 == int_finish1
                 && ch[finish2][int_finish1] == 32) {
                 return 1;
-            }
-            else if (
+            } else if (
                     finish2 == (start2 + 1) && ch[finish2][int_finish1] != 32
                     && (int_start1 == int_finish1 + 1
                         || int_start1 == int_finish1 - 1)) {
                 return 1;
             }
-            error();
             return 0;
         } else {
             if (finish2 == (start2 + 1) && finish2 < max
@@ -68,11 +63,8 @@ int checkMovePeshka(
                         || int_start1 == int_finish1 - 1)) {
                 return 1;
             }
-            error();
             return 0;
         }
-    } else {
-        error();
-        return 0;
     }
+    return 0;
 }

@@ -1,13 +1,9 @@
-#Ignore main file
-
-
-#Ignore .<name> files
-*.o
 *.exe
 *.out
 *.a
 *.d
-
+*.o
 bin/chessviz
-.vscode
+bin/chessviz_test
+main
 

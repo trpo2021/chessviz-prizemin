@@ -1,7 +1,7 @@
 #include <libchessviz/figureMove.h>
 
 void figureMove(
-        char ch[][8], int int_start1, int start2, int finish2, int int_finish1)
+        char ch[][8], int int_start1, int start2, int int_finish1, int finish2)
 {
     char figure;
     for (int i = 0; i < 8; i++) {
