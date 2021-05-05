@@ -246,11 +246,11 @@ CTEST(checkMoveRook, test9)
                {'R', 'P', 'P', 'P', 'P', 'P', 'P', ' '},
                {' ', 'N', 'B', 'Q', 'K', 'B', ' ', 'R'}};
 
-    // 2 or 1 ; Waiting "1"
+    // 2 or 1 ; Waiting "0"
     int flag
             = checkMoveRook(ch, int_start1, start2, finish2, int_finish1, BorW);
 
-    ASSERT_EQUAL(1, flag);
+    ASSERT_EQUAL(0, flag);
 }
 
 CTEST(checkMoveRook, test10)
@@ -274,9 +274,9 @@ CTEST(checkMoveRook, test10)
                {'R', 'P', 'P', 'P', 'P', 'P', 'P', ' '},
                {' ', 'N', 'B', 'Q', 'K', 'B', ' ', 'R'}};
 
-    // 2 or 1 ; Waiting "1"
+    // 2 or 1 ; Waiting "0"
     int flag
             = checkMoveRook(ch, int_start1, start2, finish2, int_finish1, BorW);
 
-    ASSERT_EQUAL(1, flag);
+    ASSERT_EQUAL(0, flag);
 }
