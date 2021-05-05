@@ -4,6 +4,5 @@
 *.d
 *.o
 bin/chessviz
-bin/chessviz_test
-main
+bin/test
 
